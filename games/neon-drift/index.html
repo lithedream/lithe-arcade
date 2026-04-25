@@ -2,16 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <title>Neon Drift Runner | Lithe Arcade</title>
-    <link rel="stylesheet" href="./neon-drift.css" />
-    <script src="./neon-drift.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Drift | Lithe Arcade</title>
+    <link rel="stylesheet" href="../game-shell.css" />
+    <script src="../game-shell.js" defer></script>
   </head>
   <body>
-    <main class="runner-shell" data-game-root>
+    <main class="game-shell" data-game-root>
       <header>
-        <h1>Neon Drift Runner</h1>
-        <p>Tap to jump. Dodge incoming barriers. Survive the night highway.</p>
+        <h1>Neon Drift</h1>
+        <p>Game shell only. Gameplay arrives in a future update.</p>
       </header>
 
       <section data-state="menu" class="panel is-active">
@@ -19,17 +19,16 @@
         <a class="ghost" href="../../index.html">Return Homepage</a>
       </section>
 
-      <section data-state="playing" class="panel play-panel">
-        <div class="hud">
-          <span>Score: <strong data-score>0</strong></span>
-          <button data-action="pause" class="mini">Pause</button>
+      <section data-state="playing" class="panel" aria-live="polite">
+        <p>The game loop placeholder is running.</p>
+        <div class="row">
+          <button data-action="pause">Pause</button>
+          <button data-action="end">End Game</button>
         </div>
-        <canvas width="360" height="220" aria-label="Runner game canvas"></canvas>
-        <p class="hint">Tap canvas, tap anywhere, or swipe up to jump.</p>
       </section>
 
       <section data-state="paused" class="panel">
-        <p>Paused. The neon city waits for your return.</p>
+        <p>Paused.</p>
         <div class="row">
           <button data-action="resume">Resume</button>
           <a class="ghost" href="../../index.html">Return Homepage</a>
@@ -37,7 +36,7 @@
       </section>
 
       <section data-state="gameover" class="panel">
-        <p>Game over. Final score: <strong data-final-score>0</strong></p>
+        <p>Game over (placeholder state).</p>
         <div class="row">
           <button data-action="restart">Start Again</button>
           <a class="ghost" href="../../index.html">Return Homepage</a>

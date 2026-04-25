@@ -1,9 +1,9 @@
 const games = [
   {
     slug: 'neon-drift',
-    name: 'Neon Drift Runner',
-    description: 'Playable infinite runner. Tap anywhere to jump over synthwave hazards.',
-    createdAt: '2026-04-25',
+    name: 'Neon Drift',
+    description: 'Arcade racer scaffolding. Placeholder shell only, game logic to be added.',
+    createdAt: '2026-04-23',
   },
   {
     slug: 'starfall-keeper',
@@ -15,7 +15,7 @@ const games = [
     slug: 'pixel-quest',
     name: 'Pixel Quest',
     description: 'Adventure framework page. Placeholder shell only, no gameplay yet.',
-    createdAt: '2026-04-23',
+    createdAt: '2026-04-25',
   },
 ];
 
