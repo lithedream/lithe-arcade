@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starfall Keeper | Lithe Arcade</title>
+    <link rel="stylesheet" href="../game-shell.css" />
+    <script src="../game-shell.js" defer></script>
+  </head>
+  <body>
+    <main class="game-shell" data-game-root>
+      <header>
+        <h1>Starfall Keeper</h1>
+        <p>Game shell only. Gameplay arrives in a future update.</p>
+      </header>
+
+      <section data-state="menu" class="panel is-active">
+        <button data-action="start">Start Game</button>
+        <a class="ghost" href="../../index.html">Return Homepage</a>
+      </section>
+
+      <section data-state="playing" class="panel" aria-live="polite">
+        <p>The game loop placeholder is running.</p>
+        <div class="row">
+          <button data-action="pause">Pause</button>
+          <button data-action="end">End Game</button>
+        </div>
+      </section>
+
+      <section data-state="paused" class="panel">
+        <p>Paused.</p>
+        <div class="row">
+          <button data-action="resume">Resume</button>
+          <a class="ghost" href="../../index.html">Return Homepage</a>
+        </div>
+      </section>
+
+      <section data-state="gameover" class="panel">
+        <p>Game over (placeholder state).</p>
+        <div class="row">
+          <button data-action="restart">Start Again</button>
+          <a class="ghost" href="../../index.html">Return Homepage</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
