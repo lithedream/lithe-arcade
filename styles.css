@@ -1,0 +1,130 @@
+:root {
+  --violet: #6d28d9;
+  --blue: #1d4ed8;
+  --magenta: #db2777;
+  --yellow: #facc15;
+  --ink: #0f172a;
+  --paper: #f8f7ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 10% 10%, color-mix(in oklab, var(--yellow) 32%, white) 0, transparent 28%),
+    radial-gradient(circle at 90% 20%, color-mix(in oklab, var(--magenta) 24%, white) 0, transparent 34%),
+    linear-gradient(130deg, var(--violet), var(--blue) 45%, var(--magenta));
+}
+
+.shell {
+  width: min(1040px, 92vw);
+  margin: 2.5rem auto;
+  padding: 1.5rem;
+  border-radius: 22px;
+  background: color-mix(in oklab, var(--paper) 88%, white);
+  box-shadow: 0 22px 44px rgb(15 23 42 / 0.24);
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.1rem);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--violet);
+  font-weight: 700;
+}
+
+.subtitle {
+  margin-top: 0.6rem;
+  color: color-mix(in oklab, var(--ink) 70%, var(--blue));
+}
+
+.toolbar {
+  margin: 1.6rem 0;
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  background: rgb(255 255 255 / 0.6);
+  border: 1px solid rgb(148 163 184 / 0.4);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+}
+
+select {
+  border: none;
+  background: transparent;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.game-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(255px, 1fr));
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-link {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  border-radius: 18px;
+  padding: 1rem;
+  min-height: 180px;
+  border: 1px solid color-mix(in oklab, var(--violet) 35%, white);
+  background: linear-gradient(160deg, rgb(255 255 255 / 0.96), rgb(244 240 255));
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.card-link:hover,
+.card-link:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgb(29 78 216 / 0.22);
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.card-content p {
+  margin: 0.5rem 0;
+  font-size: 0.92rem;
+  line-height: 1.35;
+}
+
+small {
+  color: #475569;
+}
+
+.pill {
+  align-self: flex-start;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #111827;
+  background: var(--yellow);
+  border-radius: 999px;
+  padding: 0.35rem 0.7rem;
+}
+
+@media (max-width: 600px) {
+  .shell {
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+}

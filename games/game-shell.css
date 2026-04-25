@@ -1,0 +1,74 @@
+:root {
+  --bg: #030712;
+  --panel: #111827;
+  --ink: #e5e7eb;
+  --accent: #22d3ee;
+  --accent-2: #a78bfa;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at 20% 15%, #1e1b4b, transparent 30%), var(--bg);
+  color: var(--ink);
+}
+
+.game-shell {
+  width: min(640px, 95vw);
+  background: linear-gradient(170deg, color-mix(in oklab, var(--panel) 94%, black), #0f172a);
+  border: 1px solid rgb(148 163 184 / 0.25);
+  border-radius: 16px;
+  padding: 1.4rem;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+.panel {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgb(148 163 184 / 0.2);
+  background: rgb(2 6 23 / 0.45);
+}
+
+.panel.is-active {
+  display: block;
+}
+
+button,
+.ghost {
+  border: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  padding: 0.65rem 0.9rem;
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(150deg, var(--accent), var(--accent-2));
+  cursor: pointer;
+}
+
+.ghost {
+  background: transparent;
+  border: 1px solid rgb(226 232 240 / 0.4);
+  color: var(--ink);
+}
+
+.row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}

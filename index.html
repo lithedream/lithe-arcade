@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lithe Arcade</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p class="eyebrow">Browser Arcade</p>
+        <h1>Lithe Arcade</h1>
+        <p class="subtitle">Pick a world, press start, and play in your browser.</p>
+      </header>
+
+      <section class="toolbar" aria-label="Sort games">
+        <label for="sort-order">Sort</label>
+        <select id="sort-order" name="sort-order">
+          <option value="new">Newest first</option>
+          <option value="old">Oldest first</option>
+        </select>
+      </section>
+
+      <section>
+        <ul id="game-list" class="game-list" aria-live="polite"></ul>
+      </section>
+    </main>
+
+    <template id="game-card-template">
+      <li class="game-card">
+        <a class="card-link" data-role="game-link">
+          <div class="card-content">
+            <h2 data-role="name"></h2>
+            <p data-role="description"></p>
+            <small data-role="date"></small>
+          </div>
+          <span class="pill">Open</span>
+        </a>
+      </li>
+    </template>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
