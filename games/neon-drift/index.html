@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Neon Drift Runner | Lithe Arcade</title>
+    <link rel="stylesheet" href="./neon-drift.css" />
+    <script src="./neon-drift.js" defer></script>
+  </head>
+  <body>
+    <main class="runner-shell" data-game-root>
+      <header>
+        <h1>Neon Drift Runner</h1>
+        <p>Tap to jump. Dodge incoming barriers. Survive the night highway.</p>
+      </header>
+
+      <section data-state="menu" class="panel is-active">
+        <button data-action="start">Start Game</button>
+        <a class="ghost" href="../../index.html">Return Homepage</a>
+      </section>
+
+      <section data-state="playing" class="panel play-panel">
+        <div class="hud">
+          <span>Score: <strong data-score>0</strong></span>
+          <button data-action="pause" class="mini">Pause</button>
+        </div>
+        <canvas width="360" height="220" aria-label="Runner game canvas"></canvas>
+        <p class="hint">Tap to jump. Grab pink orbs for frenzy score boosts.</p>
+      </section>
+
+      <section data-state="paused" class="panel">
+        <p>Paused. The neon city waits for your return.</p>
+        <div class="row">
+          <button data-action="resume">Resume</button>
+          <a class="ghost" href="../../index.html">Return Homepage</a>
+        </div>
+      </section>
+
+      <section data-state="gameover" class="panel">
+        <p>Game over. Final score: <strong data-final-score>0</strong></p>
+        <div class="row">
+          <button data-action="restart">Start Again</button>
+          <a class="ghost" href="../../index.html">Return Homepage</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
