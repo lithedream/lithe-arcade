@@ -4,7 +4,7 @@ Scope: entire repository.
 
 ## Project intent
 
-This repository hosts a browser-arcade hub where every game is independent and directly routable.
+This repository hosts a smartphone-first synthwave browser-arcade hub where every game is independent and directly routable.
 
 ## Required structure for new games
 
@@ -20,8 +20,14 @@ This repository hosts a browser-arcade hub where every game is independent and d
 - Must show **Return Homepage** again in pause/game-over states.
 - During active playing state, hide the return-home link/button.
 
+## Mobile interaction contract
+
+- Controls should prioritize touch/tap first.
+- Swipes can be optional enhancements.
+- UI should remain playable and readable on narrow phone viewports.
+
 ## Homepage contract
 
 - Homepage must list games with name + description.
 - Homepage list must support sorting by newest/oldest.
-- Homepage palette should stay in the violet/blue/magenta/yellow family.
+- Homepage styling should stay synthwave with violet/blue/magenta/yellow accents.
